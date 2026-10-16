@@ -1,0 +1,138 @@
+:root {
+    --bg: #2a0d45;
+    --bg-deep: #1f0a35;
+    --text: #f5f0ff;
+    --muted: rgba(255, 255, 255, 0.75);
+    --button1: #9d63d8;
+    --button2: #7a47c5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+}
+
+.page {
+    min-height: 100vh;
+    padding: 22px 42px 30px;
+}
+
+.topbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+.brand-mark {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    position: relative;
+    display: inline-block;
+}
+
+.brand-mark::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    left: 8px;
+    top: 8px;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 52px;
+}
+
+.hero h1 {
+    margin: 0 auto;
+    max-width: 980px;
+    font-size: clamp(3rem, 5vw, 7rem);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+    font-weight: 800;
+}
+
+.lead {
+    max-width: 760px;
+    margin: 26px auto 0;
+    font-size: clamp(1.1rem, 1.8vw, 1.9rem);
+    line-height: 1.45;
+    color: var(--muted);
+}
+
+.cta {
+    margin-top: 32px;
+    border: none;
+    border-radius: 14px;
+    padding: 18px 32px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: white;
+    background: linear-gradient(135deg, var(--button1) 0%, var(--button2) 100%);
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .page {
+        padding: 18px 18px 30px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brand {
+        font-size: 1.6rem;
+    }
+}
